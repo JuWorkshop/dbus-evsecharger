@@ -21,7 +21,7 @@ The following script should do everything for you:
 ```
 wget https://github.com/JuWorkshop/dbus-evsecharger/archive/refs/heads/main.zip
 unzip main.zip "dbus-evsecharger-main/*" -d /data
-mv /data/dbus-goecharger-main /data/dbus-evsecharger
+mv /data/dbus-evsecharger-main /data/dbus-evsecharger
 chmod a+x /data/dbus-evsecharger/install.sh
 /data/dbus-evsecharger/install.sh
 rm main.zip
