@@ -164,11 +164,12 @@ class DbusEvseChargerService:
             data = self._getEvseChargerData()
 
             # send data to DBus
-            self._dbusservice['/Ac/L1/Power'] = int(data['amp'] * 230 / 1000)
+	    voltage = int(data['voltage'])
+            self._dbusservice['/Ac/L1/Power'] = int(data['amp'] * voltage / 1000)
             self._dbusservice['/Ac/L2/Power'] = 0
             self._dbusservice['/Ac/L3/Power'] = 0
-            self._dbusservice['/Ac/Power'] = int(data['amp'] * 230 / 1000)
-            self._dbusservice['/Ac/Voltage'] = 230
+            self._dbusservice['/Ac/Power'] = int(data['amp'] * voltage / 1000)
+            self._dbusservice['/Ac/Voltage'] = voltage
             self._dbusservice['/Current'] = float(data['amp'] / 1000)
             self._dbusservice['/Ac/Energy/Forward'] = float(data['wattsec'] / 3600000)  # int(float(data['eto']) / 10.0)
             if int(data['state']) == 1 or int(data['state']) == 3:
