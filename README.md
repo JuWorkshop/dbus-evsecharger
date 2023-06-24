@@ -1,4 +1,4 @@
-# dbus-open-evse
+# dbus-evcharger-openwb
 Integrate Open EV charger with data from openWB into Victron Energy Venus OS
 
 ## Purpose
