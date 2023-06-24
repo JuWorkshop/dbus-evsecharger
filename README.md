@@ -1,5 +1,5 @@
 # dbus-evcharger-openwb
-Integrate Open EV charger with data from openWB into Victron Energy Venus OS
+Integrate EV charger with data from openWB into Victron Energy Venus OS
 
 ## Purpose
 This script supports reading EV charger values from openWB. Writing values is supported for "Enable charging" and "Charging current" 
